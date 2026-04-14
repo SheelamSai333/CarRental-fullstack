@@ -71,6 +71,9 @@ export const getUserData = async (req,res)=>{
 export const getCars = async (req,res)=>{
     try{
         const cars = await Car.find({isAvaliable: true})
+        if (cars.length === 0){
+            return res.json({success: false, message: "NO Cars are Available"})
+        }
         res.json({success: true, cars})
     }catch(error){
         console.log(error.message)

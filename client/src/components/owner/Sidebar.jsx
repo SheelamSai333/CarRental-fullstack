@@ -4,7 +4,7 @@ import { assets  , ownerMenuLinks } from '../../assets/assets';
 import { useAppContext } from '../../context/AppContext';
 import toast from 'react-hot-toast';
 
-const Sidebar = () => {
+const Sidebar = () => {  
 
     const {user , axios, fetchUser} = useAppContext();
     const location =useLocation()
